@@ -11,7 +11,8 @@
 \usepackage{fourier}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 
-\begin{document}
+	\begin{document}
+	
 \begin{center}
 \begin{ug}
 \centering
@@ -22,9 +23,14 @@
 \textbf{Facultad de Ciencias Matemáticas y Físicas}\\
 
 \textbf{Integrantes: }\\
-González Bernabé Carolina\\      
-Larrosa Figueroa Ronaldo\\
-Moran Choez Joan\\
+\begin{itemize}
+\item González Bernabé Carolina\\      
+\item Larrosa Figueroa Ronaldo\\
+\item Moran Choez Joan\\
+\end{itemize}
+
+
+
 \textbf{Docente: }\\
  Miguel Botto Tobar\\
 Curso: SOF-S-MA-3-2\\
@@ -72,9 +78,13 @@ Las obras de arte destacadas en Muzei están a diario a cargo de nuestro reducid
 
 
 \subsection{Requerimientos}
-a)	Es una aplicación que actualizará constantemente el fondo de pantalla del móvil.\\
-b)	Disminuir la intensidad para mantener la visibilidad de los iconos.\\
-c)	Android 4.2 o superior\\
+
+\begin{itemize}
+\item Es una aplicación que actualizará constantemente el fondo de pantalla del móvil.\\
+\item Disminuir la intensidad para mantener la visibilidad de los iconos.\\
+\item Android 4.2 o superior\\
+\end{itemize}
+
 
 \subsection{Diseño y Desarrollo}
 Existe una infinidad de librerías, que ayudan en muchas ocasiones. Con ellas, se puede darle un toque profesional a la interfaz con alguna animación interesante, eliminar la necesidad de escribir líneas de código repetitivo, conectar una aplicación a Internet y realizar acciones REST con relativa facilidad. Las principales librerias utilizadas para la creación del presente proyecto proyecto son:\\
@@ -117,8 +127,33 @@ importar  kotlinx.coroutines.asCoroutineDispatcher\\
     
   
 \subsection{API}
+Muzei ofrece dos superficies API:\\
+\begin{itemize}
+\item Una API simple que te permite crear tu propia fuente de fondo de pantalla.\\
+\item Un contrato de proveedor de contenido que le permite leer datos de obras de arte actuales.\\
+\textbf{Construyendo su propia fuente de papel tapiz}\\
+\end{itemize}
+
+
+
+
+
+Es bastante fácil comenzar a crear su propia fuente de fondo de pantalla:\\
+\begin{itemize}
+\item Si está utilizando Gradle o Maven, basta con añadir las siguientes coordenadas Maven como una dependencia: com.google.android.apps.muzei:muzei-api:+. De lo contrario, simplemente agregue el JAR API (y los JAR Javadoc / fuentes opcionales) a su proyecto de Android.\\
+\item Cree un nuevo servicio que extienda la clase MuzeiArtSourceo RemoteMuzeiArtSource.\\
+\item Agregue la <service>etiqueta correspondiente a su AndroidManifest.xmlarchivo y agregue los elementos <intent-filter>y <meta-data>elementos necesarios .\\
+\end{itemize}
+
+
+
+
+Una vez que tenga instalados Muzei y su fuente personalizada, debería poder elegir su fuente en la pantalla de personalización de Muzei.\\
+
+Una discusión más profunda de la API, junto con fragmentos de código, está disponible en la MuzeiArtSourcereferencia de clase.\\
 Paquete com.google.android.apps.muzei.api\\
-Resumen de clase\\
+\textbf{Resumen de clase}\\
+\\
 Ilustraciones:	Un objeto serializable que representa una sola obra de arte producida por a MuzeiArtSource.\\
 Artwork.Builder:	Una interfaz fluida estilo constructor para crear objetos.Artwork
 MuzeiArtSource:	Clase base para una fuente de arte Muzei Live Wallpaper.\\
@@ -165,6 +200,9 @@ https://github.com/joan2211/ProyectoSegundoParcial\\
 
 \begin{Git}
 \includegraphics[scale=0.4]{GitHub.PNG}
-\end{Git}
+\end{Git}\\
+
+Para saber más del proyecto "Muzei" se adjunta la dirección del repositorio en GitHub: \\
+https://github.com/romannurik/muzei
 
 \end{document}
